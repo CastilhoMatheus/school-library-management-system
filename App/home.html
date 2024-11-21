@@ -3,9 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Library System</title>
+    <title>School Library System</title>
+    <link rel="stylesheet" href="assets/home.css">
 </head>
 <body>
-    <h1>Welcome to our Library</h1>
+    <header>
+        <h1>School Library System</h1>
+        <div class="user-dropdown">
+            <button class="user-button" onclick="toggleDropdown()"><span id="user-name-btn"></span> &#9662;</button>
+            <div id="userDropdown" class="dropdown-content">
+                <span id="user-name"></span>
+                <button onclick="logout()">Log Out</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="book-form">
+            <h2>Add a New Book</h2>
+            <form id="bookForm">
+                <input type="text" id="bookTitle" placeholder="Book Title" required>
+                <input type="text" id="bookAuthor" placeholder="Author" required>
+                <button type="submit">Add Book</button>
+            </form>
+        </section>
+        
+        <section class="book-list">
+            <h2>Book List</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Status</th>
+                        <th>Student Number</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="bookList">
+                    <!-- Example Book Entry -->
+                    <tr>
+                        <td>The Catcher in the Rye</td>
+                        <td>J.D. Salinger</td>
+                        <td>Available</td>
+                        <td>-</td>
+                        <td>
+                            <button onclick="bookBook(0)">Book</button>
+                            <button onclick="editBook(0)">Edit</button>
+                            <button onclick="deleteBook(0)">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="scripts/home.js"></script>
 </body>
 </html>
