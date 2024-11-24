@@ -3,5 +3,23 @@
     "dotenv": "^16.4.5",
     "express": "^4.21.1",
     "mysql": "^2.18.1"
-  }
+  },
+  "name": "school-library-management-system",
+  "description": "Project requires Express. For instructions follow:",
+  "version": "1.0.0",
+  "main": "database.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CastilhoMatheus/school-library-management-system.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CastilhoMatheus/school-library-management-system/issues"
+  },
+  "homepage": "https://github.com/CastilhoMatheus/school-library-management-system#readme"
 }

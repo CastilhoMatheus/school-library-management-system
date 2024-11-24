@@ -19,15 +19,11 @@ app.get("/home", (req, res) => {
 
 // Login Route
 app.post("/login", (req, res) => {
-  console.log(req.body);
   const { email, password } = req.body;
 
-  console.log("Received login request with email:", email);
-  console.log("Received login request with password:", password);
-
-  // if (!email || !password) {
-  //   return res.status(400).send({ message: "Please fill in all fields." });
-  // }
+  if (!email || !password) {
+    return res.status(400).send({ message: "Please fill in all fields." });
+  }
 
   // Query to find the user
   const query = "SELECT * FROM Users WHERE email = ?";
@@ -40,7 +36,6 @@ app.post("/login", (req, res) => {
 
     const user = results[0];
     const match = password === user.password;
-    // await bcrypt.compare(password, user.password);
 
     if (match) {
       res.status(200).send({
