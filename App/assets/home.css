@@ -94,10 +94,12 @@ main {
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 30%;
+    margin: 20px auto; /* Center the form horizontally */
 }
 
 .book-form h2 {
     margin-bottom: 15px;
+    text-align: center;
 }
 
 .book-form form {
@@ -120,11 +122,13 @@ main {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 16px;
 }
 
 .book-form button:hover {
     background-color: #0056b3;
 }
+
 
 /* Book List Section */
 .book-list {
@@ -133,6 +137,10 @@ main {
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 65%;
+}
+
+.student-book-list {
+    width: 100%;
 }
 
 .book-list h2 {
@@ -164,10 +172,5 @@ main {
 
 .book-list button:first-of-type {
     background-color: #ffc107;
-    color: white;
-}
-
-.book-list button:last-of-type {
-    background-color: #dc3545;
     color: white;
 }

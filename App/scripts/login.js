@@ -1,4 +1,10 @@
 document
+  .getElementById("registerButton")
+  .addEventListener("click", function () {
+    window.location.href = "form.html";
+  });
+
+document
   .getElementById("loginForm")
   .addEventListener("submit", async function (e) {
     e.preventDefault();
@@ -17,6 +23,10 @@ document
       if (response.ok) {
         if (data.user.userType === "librarian") {
           window.location.href = `/home?userId=${
+            data.user.id
+          }&userName=${encodeURIComponent(data.user.name)}`;
+        } else {
+          window.location.href = `/student?userId=${
             data.user.id
           }&userName=${encodeURIComponent(data.user.name)}`;
         }
